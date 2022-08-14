@@ -1,0 +1,137 @@
+/* RESET */
+*{
+  margin: 0% auto;
+  padding: 0%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*******VARIABLES***********/
+:root {
+  /* Color */
+  --hue: 270;
+  --body-bg-color: hsl(var(--hue) 60% 98%);
+  --purple: hsl(var(--hue) 50% 73%);
+  /* Size Font*/
+  --family-font: 'Poppins', sans-serif;
+}
+
+/*******BASE***********/
+body {
+  background-color: var(--body-bg-color);
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-width: 21.875rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.avatar {
+  width: 12.5rem;
+  height: 12.5rem;
+  margin: 12.9375rem auto 0;
+  position: relative;
+  /*Agora ao invés do position absolute fizer o top -15px na página inteira, ele fará em relação a esta classe avatar, por isso o "relative"*/
+}
+.avatar span {
+  position: absolute;
+  width: 12.875rem;
+  height: 12.875rem;
+  border-radius: 100%;
+  border-style: solid;
+  border-width: 0.125rem;
+  line-height: 3.125rem;
+  border-color: var(--purple);
+  background-color: rgba(0, 0, 0, 0);
+  top: -.3rem;
+  left: -.3rem;
+  /*Por causa das configurações de clippy-path no estilo abaixo, este cara perdeu o seu nível, retornaremos isso usando o z-index, trazendo ele pra frente*/
+  z-index: 1;
+}
+.avatar > img {
+  width: 12.5rem;
+  height: 12.5rem;
+  object-fit: cover;
+  /*Esta funcionalidade object-fit, vai fazer com que a minha imagem se adapte, não fique toda esticada, desproporcional, então vamos cobrir (cover)*/
+  /*clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);*/
+  clip-path: circle(6.25rem at center);
+  /*Podemos usar uma ferramenta online pra construir melhor nosso polígino, digitando no google: clippy css. E copiando */
+
+  /*Esse sinal > vai selecionar dentro do avatar a imagem que está no primeiro nível, já que a outra que está dentro do span está no segundo, e eu não quero modificar ela agora.*/
+}
+
+p.link-instagram{
+  width: 6.1875rem;
+  height: 1.5rem;
+  margin-top: 1.375rem;
+}
+.link-instagram {
+  display: flex;
+}
+.link-instagram a{
+  justify-content: center;
+  font: 300 1rem var(--family-font);
+  color: var(--purple);
+  border-radius: 50%;
+}
+
+.links{
+  margin-top: 2.0625rem;
+}
+
+.numbers-links{
+  display: flex;
+  width: 20.375rem;
+  height: 3.0625rem;
+  border-color: var(--purple);
+  border-style: solid;
+  border-width: 2px;
+  line-height: 50px;
+  border-radius: 0.3rem 0.3rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.375rem 0.3125rem -0.375rem black;
+}
+
+.numbers-links a {
+  display: flex;
+  width: 3.75rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple);
+  font: 600 1rem var(--family-font);
+}
+
+.icons{
+  margin-bottom: 12.625rem;
+}
+.icons ul{
+  margin-top: 3.25rem;
+  width: 15.92rem;
+  height: 1.5rem;
+  text-align: center;
+  padding: 0;
+}
+.icons li{
+  display:inline-block;
+  vertical-align: top;
+  padding: 0 0.6rem;
+  height: 1.5rem;
+}
+.icons li img{
+  max-width: 100%;
+  height: auto;
+}
