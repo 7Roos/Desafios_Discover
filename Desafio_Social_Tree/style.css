@@ -15,7 +15,7 @@ a {
 /*******VARIABLES***********/
 :root {
   /* Color */
-  --hue: 270;
+  --hue: 13;
   --body-bg-color: hsl(var(--hue) 60% 98%);
   --purple: hsl(var(--hue) 50% 73%);
   /* Size Font*/
@@ -107,7 +107,7 @@ p.link-instagram{
 
 .numbers-links a {
   display: flex;
-  width: 3.75rem;
+  width: 15.75rem;
   height: 1.5rem;
   align-items: center;
   justify-content: center;
@@ -117,6 +117,8 @@ p.link-instagram{
 
 .icons{
   margin-bottom: 12.625rem;
+  
+  
 }
 .icons ul{
   margin-top: 3.25rem;
@@ -124,14 +126,20 @@ p.link-instagram{
   height: 1.5rem;
   text-align: center;
   padding: 0;
+  
+  
 }
 .icons li{
   display:inline-block;
   vertical-align: top;
   padding: 0 0.6rem;
   height: 1.5rem;
+  
+  
 }
 .icons li img{
   max-width: 100%;
   height: auto;
+  filter: invert(.25) sepia(1.5) saturate(53) hue-rotate(13deg);
 }
+/*Convertida a cor dos ícones através de: https://jsfiddle.net/3tw2gjwt/52/*/
